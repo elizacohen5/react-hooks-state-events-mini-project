@@ -30,11 +30,11 @@ function NewTaskForm({ categories, onTaskFormSubmit }) {
       </label>
       <label>
         Category
-        <select
+      <select
           name="category"
           onChange={(event) => setNewCategory(event.target.value)}
           value={newCategory}
-        >
+      >
           <option value="Select-Task">--Select Task--</option>
           <option value="All">{categories[0]}</option>
           <option value="Code">{categories[1]}</option>

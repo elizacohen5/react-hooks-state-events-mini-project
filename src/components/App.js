@@ -20,7 +20,7 @@ function App() {
       <h2>My tasks</h2>
       <CategoryFilter categories={CATEGORIES} taskList={taskList} setTaskList={setTaskList} />
       <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={submitTaskForm} />
-      <TaskList taskList={taskList} setTaskList={setTaskList} />
+      <TaskList tasks={taskList} setTaskList={setTaskList} />
     </div>
   );
 }

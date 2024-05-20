@@ -6,9 +6,10 @@ function CategoryFilter({ categories, taskList, setTaskList }) {
     const filteredTasks = taskList.filter((task) => {
       return task.category === event.target.value;
     });
-    if (event.target.value != "All") {
+    if (event.target.value !== "All") {
       setTaskList(filteredTasks);
     }
+    console.log(taskList)
   }
 
   return (
