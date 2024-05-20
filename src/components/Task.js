@@ -1,11 +1,22 @@
 import React from "react";
 
-function Task() {
+function Task({ text, category, taskList, setTaskList }) {
+
+  function handleDelete(name, category) {
+    console.log(name + category);
+    const updatedTasks = taskList.filter(
+      (task) => task.text + task.category !== name + category
+    );
+    setTaskList(updatedTasks);
+  }
+
   return (
     <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
-      <button className="delete">X</button>
+      <div className="label">{category}</div>
+      <div className="text">{text}</div>
+      <button className="delete" onClick={() => handleDelete(text, category)}>
+        X
+      </button>
     </div>
   );
 }
